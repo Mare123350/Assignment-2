@@ -17,7 +17,6 @@ const site = {
 };
 
 
-
 const projects = [
   {
     title: 'AWS Secure VPC & 3-Tier Web App',
@@ -57,20 +56,18 @@ const projects = [
   {
     title: 'This Portfolio (Express + EJS + Bootstrap)',
     stack: ['Express','EJS','Bootstrap','Render/AWS'],
-    link: 'https://github.com/Mare123350',
+    link: 'https://github.com/Mare123350', 
     desc: 'Templated pages, routes, and Bootstrap UI; deployed on a cloud platform.',
     image: '/images/portfolio.png'
   }
 ];
 
 
-
-router.get('/', function(req, res) {
+router.get('/', (req, res) => {
   res.render('home', { site, pageTitle: 'Home' });
 });
 
-
-router.get('/about', function(req, res) {
+router.get('/about', (req, res) => {
   const about = {
     name: 'Mare Okoigun',
     tagline: 'Networking & IT Security student',
@@ -92,17 +89,15 @@ router.get('/about', function(req, res) {
   res.render('about', { site, pageTitle: 'About', about });
 });
 
-
-router.get('/projects', function(req, res) {
+router.get('/projects', (req, res) => {
   res.render('projects', { site, pageTitle: 'Projects', projects });
 });
 
-
-router.get('/contact', function(req, res) {
+router.get('/contact', (req, res) => {
   res.render('contact', { site, pageTitle: 'Contact', status: null });
 });
 
-router.post('/contact', function(req, res) {
+router.post('/contact', (req, res) => {
   const { name, email, message } = req.body || {};
   if (!name || !email || !message) {
     return res.render('contact', { site, pageTitle: 'Contact',
@@ -112,8 +107,5 @@ router.post('/contact', function(req, res) {
     status: { type: 'success', text: 'Thanks—your message was received.' }});
 });
 
-module.exports = router;
 
-router.get('/projects', (req, res) => {
-  res.render('projects', { site, pageTitle: 'Projects', projects });
-});
+module.exports = router;

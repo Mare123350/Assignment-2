@@ -31,5 +31,32 @@ ul.text-secondary li {
   margin-bottom: 0.5rem;
 }
 
+/* Base */
+:root { --ink:#e9eef5; --muted:#98a2b3; }
+body { background-color:#1c1f22; color:var(--ink); }
+p, li { line-height:1.7; }
+h1, h3 { color:#fff; }
+
+/* Navbar */
+.navbar-brand { letter-spacing:.3px; }
+.navbar-nav .nav-link:hover { color:#0dcaf0 !important; }
+
+/* Footer */
+footer a:hover { color:#0dcaf0 !important; }
+
+/* Cards (Projects) */
+.card.bg-body-tertiary { background: #262a2e !important; }
+.card { border-radius:1rem; }
+.card-img-top { height:220px; object-fit:cover; }
+.card .badge { background:#49515a; }
+.card-text { color:var(--muted) !important; }
+
+/* About page image */
+img.rounded-4 { transition: transform .2s, box-shadow .2s; }
+img.rounded-4:hover { transform:scale(1.02); box-shadow:0 0 20px rgba(255,255,255,.1); }
+
+/* Layout breathing room */
+main.container { min-height:70vh; }
+
 
 
