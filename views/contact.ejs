@@ -1,0 +1,28 @@
+<header class="mb-4">
+  <h1 class="h2">Contact Me</h1>
+  <p class="text-secondary">Questions about my networking or security work? Let’s connect.</p>
+</header>
+
+<% if (status) { %>
+  <div class="alert alert-<%= status.type %>"><%= status.text %></div>
+<% } %>
+
+<form method="post" action="/contact" class="row g-3" novalidate>
+  <div class="col-md-6">
+    <label class="form-label">Name</label>
+    <input name="name" type="text" class="form-control" required>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label">Email</label>
+    <input name="email" type="email" class="form-control" required>
+  </div>
+  <div class="col-12">
+    <label class="form-label">Message</label>
+    <textarea name="message" rows="5" class="form-control" required></textarea>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">
+      <i class="fa-regular fa-paper-plane me-2"></i>Send
+    </button>
+  </div>
+</form>

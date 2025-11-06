@@ -1,0 +1,35 @@
+:root { --ink:#e9eef5; --muted:#98a2b3; }
+body { color: var(--ink); }
+.card-text { color: var(--muted) !important; }
+.navbar-brand { letter-spacing: .3px; }
+.card-img-top { height: 220px; object-fit: cover; } /* keeps project images uniform */
+
+/* --- ABOUT PAGE --- */
+body {
+  background-color: #1c1f22; /* softer dark background */
+  color: #e6e9ed;
+}
+
+h1, h3 {
+  color: #ffffff;
+}
+
+p, li {
+  line-height: 1.7;
+}
+
+img.rounded-4 {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+img.rounded-4:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+ul.text-secondary li {
+  margin-bottom: 0.5rem;
+}
+
+
+
